@@ -12,6 +12,9 @@ from pages import home, tool  # import your pages here
 app = MultiPage()
 
 
+
+
+
 # First command must be setting configs
 # Initial Settings ------------------------
 st.set_page_config(layout="wide")
