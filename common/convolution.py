@@ -23,7 +23,7 @@ def convolution(image, kernel):
     convoluted_img = np.array(image)
     #convoluted_img = np.array(image)
 
-    ker_idx_max = kernel_dim - 2
+    ker_idx_max = 1 if kernel_dim == 3 else 2
     for row in range(ker_idx_max, img_row - ker_idx_max):
         for col in range(ker_idx_max, img_col - ker_idx_max):
             result = np.array([0])
