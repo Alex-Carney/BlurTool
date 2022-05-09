@@ -70,11 +70,11 @@ def convolution_2(image, kernel, starting_points, range_around):
 
     # starting and ending row
     start_row = starting_points[0] - range_around if (starting_points[0] - range_around) >= 0 else 0
-    end_row = starting_points[0] + range_around if (starting_points[0] + range_around) <= img_row - 1 else (img_row-1)
+    end_row = starting_points[0] + range_around if (starting_points[0] + range_around) <= img_row - ker_idx_max else (img_row-ker_idx_max)
 
     # starting and ending column
     start_col = starting_points[1] - range_around if (starting_points[1] - range_around) >= 0 else 0
-    end_col = starting_points[1] + range_around if (starting_points[1] + range_around) <= img_col - 1 else (img_col-1)
+    end_col = starting_points[1] + range_around if (starting_points[1] + range_around) <= img_col - ker_idx_max else (img_col-ker_idx_max)
 
 
     for row in range(start_row, end_row):
